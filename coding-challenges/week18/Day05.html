@@ -1,0 +1,15 @@
+const str1 = 'delhi';
+const str2 = 'delph';
+const hammingDistance = (str1 = '', str2 = '') => {
+   if (str1.length !== str2.length) {
+      return 0;
+   }
+   let dist = 0;
+   for (let i = 0; i < str1.length; i += 1) {
+      if (str1[i] !== str2[i]) {
+         dist += 1;
+      };
+   };
+   return dist;
+};
+console.log(hammingDistance(str1, str2));

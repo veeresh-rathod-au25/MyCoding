@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <u>
+            STUDENT REGISTRATION FORM
+        </u>
+    </h1>
+    <form>
+    <div>
+        <label for="first">FIRST NAME:</label>
+        <input type="text" id="first" placeholder="Enter First Name" required> (max 30 characters A-Z and a-z)    
+    </div>
+    <br />
+    <div>
+        <label for="last">LAST NAME:</label>
+        <input type="text" id="last" placeholder="Enter Last Name" required> (max 30 characters A-Z and a-z)
+    </div>
+    <br />
+    <div>
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB"  required> 
+    </div>
+    <br />
+    <div>
+        <label for="Email">Email ID:</label>
+        <input type="email" id="Email" placeholder= "Enter email address" required> 
+    </div>
+    <br />
+    <div>
+        <label for="Mob No">Mobile No:</label>
+        <input type="number" id="Mob No" placeholder= "Enter Mobile Number" required> 10 digit number 
+    </div>
+    <br />
+    <div>
+        <label for="gend">Gender:</label>
+        <input type="radio" id="gend" name = "Gender" >Male</input> 
+        <input type="radio" id="gend" name = "Gender">Female</input> 
+    </div>
+    <br />
+    <div>
+        Address:
+        <textarea id="add" required >  </textarea> 
+    </div>
+    <br />
+    <div>
+        <label for="Hobb">Hobbies:</label>
+        <input type="checkbox" name = "Hobb" >Singing</input> 
+        <input type="checkbox" name = "Hobb" >Dancing</input>
+        <input type="checkbox" name = "Hobb" >Drawing</input>
+        <input type="checkbox" name = "Hobb" >Football</input>
+        <input type="checkbox" name = "Hobb" >Others</input> <input type="text" placeholder="Enter the hobby">
+    </div>
+    <br />
+    <div>
+        <label>QUALIFICATION:</label>
+        <table>
+            <tr>
+                <th>Sl. No</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>                    
+            </tr>
+            <tr>
+                <td>1.</td>
+                <th>Class X</th>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <th>Class XII</th>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <th>Graduation</th>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <th>Masters</th>
+                <td><input type="text"></td >
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <th></th>
+                <td>(10 characters max)</td>
+                <td>(upto decimal)</td>
+            </tr>
+        </table>
+    </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<input type="password" maxlength=1 id="1" onkeyup="moveOnMax(this,'a')" />
+<input type="password" maxlength=1 id="a" onkeyup="moveOnMax(this,'b')" />
+<input type="password" maxlength=1 id="b" onkeyup="moveOnMax(this,'c')" />
+<input type="password" maxlength=1 id="c" />
+
+moveOnMax =function (field, nextFieldID) {
+    if (field.value.length == 1) {
+        document.getElementById(nextFieldID).focus();
+    }
+}
