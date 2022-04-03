@@ -1,0 +1,128 @@
+openapi: 3.0.3
+info:
+  title: Sample REST APIs using Flask, OpenAPI and Connexion
+  description: Sample REST APIs using Flask, OpenAPI and Connexion
+  version: "1.0.0"
+servers:
+  - url: http://localhost:5000
+    description: Rest Server showing Swagger and Connexion capability
+paths:
+  /employee:
+    get:
+      operationId: employee.getAll
+      tags:
+        - employee
+      summary: Returns a list of employees.
+      description: Returns a list of employees.
+      responses:
+        "200": # status code
+          description: Return the entire list of employees.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/employee"
+    post:
+      operationId: employee.create
+      tags:
+        - employee
+      summary: Create a new employee
+      description: Create a new employee
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/employee"
+      responses:
+        "201":
+          description: employee Created successfully
+  /employee/{id}:
+    get:
+      operationId: employee.get
+      tags:
+        - employee
+      summary: Return an employee with given ID
+      description: Return an employee with given ID
+      parameters:
+        - name: id
+          in: path
+          description: employee ID
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200": # status code
+          description: Return an employee with given ID
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/employee"
+    delete:
+      operationId: employee.delete
+      tags:
+        - employee
+      summary: Delete an employee with given ID
+      description: Delete an employee with given ID
+      parameters:
+        - name: id
+          in: path
+          description: employee ID
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200": # status code
+          description: Deleted an employee with given ID
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/employee"
+    put:
+      operationId: employee.update
+      tags:
+        - employee
+      summary: Update an employee with given ID
+      description: Update an employee with given ID
+      parameters:
+        - name: id
+          in: path
+          description: employee ID
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/employee"
+      responses:
+        "200": # status code
+          description: Updated an employee with given ID
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/employee"
+
+
+
+components:
+    schemas:
+        employee:
+            type: object
+            properties:
+                id:
+                    type: integer
+                    format: int64
+                checked:
+                    type: boolean
+                name:
+                    type: string
+                type:
+                    type: string
+                age:
+                    type: number
+                description:
+                    type: string
+          
