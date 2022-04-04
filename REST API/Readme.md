@@ -37,7 +37,7 @@ flask, flask-marshmallow, flask-sqlalchemy, marshmallow-sqlalchemy and "connexio
 * Creating the EmployeeRepo class
 * Defined some helper methods, which we can use to perform CRUD operations on Employee entity.
 
-**schemas.py** - need to create the schema for the Item Model class
+**schemas.py** - need to create the schema for the Employee Model class
 
 **swagger.yml** - API specifications can be written in YAML or JSON format
 
